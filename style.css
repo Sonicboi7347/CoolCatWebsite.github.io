@@ -9,6 +9,11 @@ body{
     background:linear-gradient(135deg,#ffe5ec,#ffd6a5);
     color:#333;
 }
+<head>{
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    }
 
 header{
     background:#ff8fab;
