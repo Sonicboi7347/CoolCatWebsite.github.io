@@ -1,78 +1,139 @@
-<div class="card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐱 Cat World 🐾</title>
 
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
 
-<div class="card">
-    <h2>🐾 Popular Cat Breeds</h2>
+h1 {
+    color: purple;
+    font-size: 3rem;
+}
 
-    <div class="breed-grid">
+section {
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-        <div class="breed-card">
-            <h3>Maine Coon</h3>
-            <p>One of the largest domesticated cat breeds.</p>
-        </div>
+.breed {
+    margin-bottom: 15px;
+}
 
-        <div class="breed-card">
-            <h3>Persian</h3>
-            <p>Known for its long luxurious coat.</p>
-        </div>
+button {
+    background: purple;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
-        <div class="breed-card">
-            <h3>Siamese</h3>
-            <p>Famous for striking blue eyes and vocal personality.</p>
-        </div>
+button:hover {
+    background: mediumorchid;
+}
 
-        <div class="breed-card">
-            <h3>Ragdoll</h3>
-            <p>Friendly cats that often relax when picked up.</p>
-        </div>
+#factDisplay {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: darkmagenta;
+}
 
-        <div class="breed-card">
-            <h3>Bengal</h3>
-            <p>Beautiful spotted coats resembling wild cats.</p>
-        </div>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
 
-        <div class="breed-card">
-            <h3>British Shorthair</h3>
-            <p>Round face and calm temperament.</p>
-        </div>
+.gallery img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
 
-        <div class="breed-card">
-            <h3>Sphynx</h3>
-            <p>Hairless breed with a unique appearance.</p>
-        </div>
+<h1>🐱 Cat World 🐾</h1>
 
-        <div class="breed-card">
-            <h3>Scottish Fold</h3>
-            <p>Recognizable folded ears and sweet personality.</p>
-        </div>
+<section>
+<h2>🐾 Popular Cat Breeds</h2>
 
-        <div class="breed-card">
-            <h3>Norwegian Forest Cat</h3>
-            <p>Large fluffy cats adapted to cold climates.</p>
-        </div>
+<div class="breed"><strong>🐱 Maine Coon</strong><br>One of the largest domesticated cat breeds.</div>
 
-        <div class="breed-card">
-            <h3>Russian Blue</h3>
-            <p>Elegant silver-blue coat and green eyes.</p>
-        </div>
+<div class="breed"><strong>😺 Persian</strong><br>Known for its long luxurious coat.</div>
 
-    </div>
+<div class="breed"><strong>🐈 Siamese</strong><br>Famous for striking blue eyes and vocal personality.</div>
+
+<div class="breed"><strong>😸 Ragdoll</strong><br>Friendly cats that often relax when picked up.</div>
+
+<div class="breed"><strong>🐆 Bengal</strong><br>Beautiful spotted coats resembling wild cats.</div>
+
+<div class="breed"><strong>🐾 British Shorthair</strong><br>Round face and calm temperament.</div>
+
+<div class="breed"><strong>😻 Sphynx</strong><br>Hairless breed with a unique appearance.</div>
+
+<div class="breed"><strong>🐱 Scottish Fold</strong><br>Recognizable folded ears and sweet personality.</div>
+
+<div class="breed"><strong>🌲 Norwegian Forest Cat</strong><br>Large fluffy cats adapted to cold climates.</div>
+
+<div class="breed"><strong>💙 Russian Blue</strong><br>Elegant silver-blue coat and green eyes.</div>
+</section>
+
+<section>
+<h2>🎲 Random Cat Fact</h2>
+
+<button onclick="generateFact()">🐾 Generate Cat Fact</button>
+
+<p id="factDisplay">Click the button for a cat fact! 😺</p>
+</section>
+
+<section>
+<h2>📸 Cat Gallery</h2>
+
+<div class="gallery">
+<img src="https://placekitten.com/300/200" alt="Cute Cat">
+<img src="https://placekitten.com/301/200" alt="Cute Cat">
+<img src="https://placekitten.com/302/200" alt="Cute Cat">
 </div>
+</section>
 
-<div class="card">
-    <h2>🎲 Random Cat Fact</h2>
-    <button onclick="showFact()">Generate Cat Fact</button>
-    <p id="fact"></p>
-</div>
+<script>
+const catFacts = [
+    "🐱 Cats sleep for about 12–16 hours a day.",
+    "😺 A group of cats is called a clowder.",
+    "🐾 Cats can rotate their ears 180 degrees.",
+    "🐈 The oldest known pet cat existed over 9,000 years ago.",
+    "😻 A cat's nose print is unique, like a human fingerprint.",
+    "🐱 Cats have over 20 muscles that control their ears.",
+    "🐾 Most cats don't have eyelashes.",
+    "😺 Cats can jump up to six times their body length.",
+    "🐈 Purring may help cats heal faster.",
+    "🐱 Cats use their whiskers to judge space and distance."
+];
 
-<div class="card">
-    <h2>📸 Cat Gallery</h2>
+function generateFact() {
+    const randomIndex = Math.floor(Math.random() * catFacts.length);
+    document.getElementById("factDisplay").textContent =
+        catFacts[randomIndex];
+}
+</script>
 
-    <img src="download (15).jpeg" class="cat-image">
-    <img src="download (16).jpeg" class="cat-image">
-    <img src="download (17).jpeg" class="cat-image">
-    <img src="download (18).jpeg" class="cat-image">
-    <img src="close-up-of-a-cute-kitten_guvo59_Pixabay.jpg" class="cat-image">
-    <img src="img-cute-cat-breeds-you-probably-never-heard-of.webp" class="cat-image">
-
-</div>
+</body>
+</html>
