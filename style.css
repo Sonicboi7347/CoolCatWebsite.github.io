@@ -88,3 +88,34 @@ footer{
     padding:20px;
     margin-top:40px;
 }
+
+.breed-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.breed-card{
+    background:#fff5f8;
+    padding:15px;
+    border-radius:12px;
+    border:2px solid #ffd6e5;
+}
+
+.breed-card h3{
+    color:#ff5d8f;
+    margin-bottom:8px;
+}
+
+.cat-image{
+    width:100%;
+    max-width:300px;
+    border-radius:15px;
+    margin:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.facts li{
+    margin:10px 0;
+}
